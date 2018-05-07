@@ -1,14 +1,14 @@
-BIN_DIR = ${DESTDIR}/usr/bin
+BIN_DIR = ${DESTDIR}/usr/local/bin
 
 .PHONY: all clean
-all: cowsay
+all: kevinsay
 
 lander:
-	g++ cowsay.cpp -o cowsay
+	g++ kevinsay.cpp -o kevinsay
 
-install: cowsay
+install: kevinsay
 	mkdir -p ${BIN_DIR}
-	install -c -m 755 cowsay $(BIN_DIR)
+	install -c -m 755 kevinsay $(BIN_DIR)
 
 clean:
-	rm -f cowsay
+	rm -f kevinsay
